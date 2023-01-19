@@ -8,3 +8,8 @@
 
 :construction: Proyecto en Construcción :construction:
 ## :hammer:Funcionalidades del proyecto
+
+`Funcionalidad 1`: Módulo inicial con tres  Microservicio:  <br>
+`Funcionalidad 2`: Módulo  <br>
+`Funcionalidad 3`: Módulo  <br>
+`Funcionalidad 4`: Módulo  <br>
