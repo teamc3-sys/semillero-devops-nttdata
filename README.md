@@ -16,9 +16,8 @@
 
 
 
-El semillero Devops “Nttdata Colombia” es un proyecto ambicioso que quiere mostrar como los procesos en las nuevas tecnologias de la informacion se pueden automatizar. 
-Sin embargo, se ha identificado tras un estudio de mercado que los colombianos consultan a través de internet los inmuebles una y otra 
-vez antes de tomar una decisión tan importante como es el alquiler o la compra de un inmueble 
+El semillero Devops “Nttdata Colombia” es un proyecto ambicioso que quiere mostrar como los procesos en las nuevas tecnologias de la información se pueden automatizar. 
+Sin embargo, se ha identificado tras un estudio de mercado que las Empresas tienen dificultades en encontrar mano de obra calificada y para enfrentar estos nuevos retos por tal motivo hemos decidido crear un proyecto en esta area de la tecnologia. 
 
 ## :card_file_box:Tecnologias Utilizadas <br>
 :pushpin: TypeScript <br>
