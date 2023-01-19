@@ -13,3 +13,16 @@
 `Funcionalidad 2`: Módulo  <br>
 `Funcionalidad 3`: Módulo  <br>
 `Funcionalidad 4`: Módulo  <br>
+
+
+
+El semillero Devops “Nttdata Colombia” es un proyecto ambicioso que quiere mostrar como los procesos en las nuevas tecnologias de la informacion se pueden automatizar. 
+Sin embargo, se ha identificado tras un estudio de mercado que los colombianos consultan a través de internet los inmuebles una y otra 
+vez antes de tomar una decisión tan importante como es el alquiler o la compra de un inmueble 
+
+## :card_file_box:Tecnologias Utilizadas <br>
+:pushpin: TypeScript <br>
+:pushpin: Html <br>
+:pushpin: Css <br>
+:pushpin: JavaScript <br>
+:pushpin: Nodejs <br>
