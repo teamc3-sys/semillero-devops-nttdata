@@ -1,4 +1,4 @@
-<h1 align="center"> Semillero Devop </h1> 
+<h1 align="center"> Semillero Devops </h1> 
 <h1 align="center"> Nttdata </h1>
 
 ![Hogar Colombia”](https://www.avaesen.es/wp-content/uploads/2021/10/NTTDATA_.jpg)
