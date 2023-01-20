@@ -1,7 +1,7 @@
 <h1 align="center"> Semillero Devops </h1> 
 <h1 align="center"> Despliegue de infractructura como codigo y Microservicios  </h1>
 
-![Hogar Colombia”](https://www.avaesen.es/wp-content/uploads/2021/10/NTTDATA_.jpg)
+![Hogar Colombia”](https://blog.tenea.com/wp-content/uploads/2021/03/devops-que-es-e1616141432325.jpg)
 
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
 ![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)<br>
