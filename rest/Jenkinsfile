@@ -25,7 +25,12 @@ pipeline {
                 echo 'succesfull'
             }
         }
-        stage('Run Docker Image') {
+        stage('Push to Docker Hub') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker_hub', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                     sh 'docker push myimage:latest'
+                }
+        stage('push Docker Image') {
             steps {
                 //sh 'gradle dockerRun'
                 echo 'succesfull'
