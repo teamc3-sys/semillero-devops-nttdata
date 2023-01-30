@@ -9,7 +9,7 @@ pipeline {
                 script{
                 sh """
                 ls -la
-                cd resto
+                cd rest
                 ls -la
                 gradle build
                """
