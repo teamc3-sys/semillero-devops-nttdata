@@ -12,6 +12,7 @@ pipeline {
                 cd rest
                 ls -la
                 gradle build
+                pwd
                """
             }
             }
