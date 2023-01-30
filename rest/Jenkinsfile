@@ -9,7 +9,7 @@ pipeline {
                 script{
                 sh """
                 ls -la
-                cd micro_boton
+                cd resto
                 ls -la
                 gradle build
                """
