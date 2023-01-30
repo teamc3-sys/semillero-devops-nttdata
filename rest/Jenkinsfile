@@ -26,6 +26,9 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 //sh 'gradle docker'
+                sh 'docker login -u $DOCKER_USER -p $DOCKER_PASSWORD'
+                //sh 'docker tag mi-proyecto $DOCKER_USER/mi-proyecto'
+                //sh 'docker push $DOCKER_USER/mi-proyecto'
                 echo 'succesfull'
             }
         }
