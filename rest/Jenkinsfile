@@ -10,8 +10,7 @@ pipeline {
                 sh """
                 cd rest
                 gradle build
-                docker --version
-               """
+                """
             }
             }
         }
@@ -23,16 +22,26 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                //sh 'gradle docker'
-                //sh 'docker login -u $DOCKER_USER -p $DOCKER_PASSWORD'
-                //sh 'docker tag mi-proyecto $DOCKER_USER/mi-proyecto'
-                //sh 'docker push $DOCKER_USER/mi-proyecto'
+                script{
+                 sh"""
+                      cd rest
+                      docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+                      docker build -t test/test:1.0 .
+                      docker push $DOCKER_USER/test:1.0
+                    """
+                }
                 echo 'succesfull'
             }
         }
-        stage('Push Docker Image') {
+        stage('Deployment') {
             steps {
-                //sh 'gradle dockerPush'
+                script{
+                sh """
+                az login 
+                cd rest/k8s
+                kubectl apply -f ms-rest-yaml
+                """
+                }
                 echo 'succesfull'
             }
         }
