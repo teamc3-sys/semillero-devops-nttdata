@@ -37,7 +37,9 @@ pipeline {
             steps {
                 script{
                 sh """
-                az login 
+                az login --service-principal --username 0ece9390-f200-41de-86d9-1fe1ca8df163 --password eNl8Q~aS9gATKOMkK6u-R-4yEzdTUXdzVvbSUb7O --tenant 8012c4e1-c857-4f92-9f19-56a893d43241 
+                az account set --subscription 793fc27d-5262-4d46-ab0e-ab4cb45d651d
+                az aks get-credentials --resource-group groupc3 --name groupc3cluster
                 cd rest/k8s
                 kubectl apply -f ms-rest-yaml
                 """
