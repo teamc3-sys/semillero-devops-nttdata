@@ -41,7 +41,7 @@ pipeline {
                 az account set --subscription 793fc27d-5262-4d46-ab0e-ab4cb45d651d
                 az aks get-credentials --resource-group groupc3 --name groupc3cluster
                 cd rest/k8s
-                kubectl apply -f ms-rest-yaml
+                kubectl apply -f micro_imagen.yaml
                 """
                 }
                 echo 'succesfull'
