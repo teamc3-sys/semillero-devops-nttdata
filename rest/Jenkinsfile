@@ -21,6 +21,9 @@ pipeline {
             }
         }
         stage('Build Docker Image') {
+            agent{
+            label 'Docker-Slave'
+            } 
             steps {
                 script{
                  sh"""
