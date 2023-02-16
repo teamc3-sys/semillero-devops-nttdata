@@ -26,8 +26,8 @@ pipeline {
                  sh"""
                       cd rest
                       docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-                      docker build -t test/test:1.0 .
-                      docker push $DOCKER_USER/test:1.0
+                      docker build -t test/test:2.0 .
+                      docker push $DOCKER_USER/test:2.0
                     """
                 }
                 echo 'succesfull'
