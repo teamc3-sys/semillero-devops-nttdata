@@ -37,9 +37,9 @@ pipeline {
             steps {
                 script{
                 sh """
-                az login --service-principal --username 0ece9390-f200-41de-86d9-1fe1ca8df163 --password eNl8Q~aS9gATKOMkK6u-R-4yEzdTUXdzVvbSUb7O --tenant 8012c4e1-c857-4f92-9f19-56a893d43241 
-                az account set --subscription 793fc27d-5262-4d46-ab0e-ab4cb45d651d
-                az aks get-credentials --resource-group groupc3 --name groupc3cluster
+                az login --service-principal --username 8eca206b-667a-4436-b8a8-cf554837c081 --password xlK8Q~Gyc4VSLqrReh314L1KDAz971ApMEE6Iaja --tenant 374fe296-bb62-48b2-b064-75f1b0fae7ce 
+                az account set --subscription 33414221-3b85-41aa-b5d1-5d349e46fee3
+                az aks get-credentials --resource-group grupoc3 --name clustergrupoc3
                 cd rest/k8s
                 kubectl apply -f micro_imagen.yaml
                 """
