@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: micro-imagen
-          image: micro-imagen:1.0
+          image: trion97/test
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
