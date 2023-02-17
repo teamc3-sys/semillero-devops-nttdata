@@ -17,7 +17,7 @@ pipeline {
         stage('test with Sonarqube') {
             steps {
                 script{
-                    withSonarQubeEnv('Sonarqube'){
+                    withSonarQubeEnv('Sonar'){
                         sh"""
                         cd rest 
                         gradle sonarqube \
