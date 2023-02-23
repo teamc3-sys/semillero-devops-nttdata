@@ -22,8 +22,8 @@ pipeline {
                         cd rest 
                         gradle sonarqube \
                         -Dsonar.project=sonarqube \
-                        -Dsonar.host.url=http://10.0.197.67:9000 \
-                        -Dsonar.login=67d283e497466cf386687d68829daa00a4b0d974 \
+                        -Dsonar.host.url=http://192.168.6.179:9000 \
+                        -Dsonar.login=3fe975c31763637ee291bf95353b3f79ca651d99 \
                         -D sonar.sourceEncoding=UTF-8 \
                         -D sonar.language=java 
                         """
@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             agent{
-            label 'Docker-Slave'
+            label 'Docker_Slave'
             } 
             steps {
                 script{
