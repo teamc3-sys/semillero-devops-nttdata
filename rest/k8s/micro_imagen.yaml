@@ -23,7 +23,7 @@ spec:
           image: trion97/test:1.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080
+            - containerPort: 8082
 ---
 apiVersion: v1
 kind: Service
@@ -32,8 +32,8 @@ metadata:
 spec:
   ports:
     - protocol: "TCP"
-      port: 8080        # The port inside the cluster
-      targetPort: 8080  # The port exposed by the service
+      port: 8082        # The port inside the cluster
+      targetPort: 8082  # The port exposed by the service
   type: LoadBalancer        # Type of service
   selector:
     app: micro-imagen
