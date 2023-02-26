@@ -10,9 +10,9 @@ pipeline {
             steps {
                 script{
                 sh """
-                cd java-maven-app
-                sh 'mvn -B -DskipTests clean package'                
+                cd java-maven-app                                
                 """
+                sh 'mvn -B -DskipTests clean package'
             }
                 
             }
