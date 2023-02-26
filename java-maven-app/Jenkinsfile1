@@ -40,7 +40,7 @@ pipeline {
                 script{
                 sh """
                 cd java-maven-app
-                ./jenkins/scripts/deliver.sh
+                java-maven-app/jenkins/scripts/deliver.sh
                 """
             }
                 
