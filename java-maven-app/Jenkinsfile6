@@ -1,0 +1,58 @@
+pipeline {
+    agent any
+    tools {
+        maven 'mavenjenkins'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn -B -DskipTests clean package'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh './jenkins/scripts/deliver.sh'
+            }
+        }
+        stage('Build Docker Image') {
+            agent{
+            label 'Docker_Slave'
+            } 
+            steps {
+                script{
+                 sh"""
+                      docker login -u ramisistemas -p dckr_pat_UU4G2KcmDJkNfGnJhTwE14XlQfs
+                      sudo docker build -t ramisistemas/mavenjenkins:1.0 .
+                      docker push ramisistemas/mavenjenkins:1.0
+                    """
+                }
+                echo 'succesfull'
+            }
+        
+        }
+         stage('Deployment') {
+            steps {
+                script{
+                sh """
+                az login --service-principal --username 8eca206b-667a-4436-b8a8-cf554837c081 --password xlK8Q~Gyc4VSLqrReh314L1KDAz971ApMEE6Iaja --tenant 374fe296-bb62-48b2-b064-75f1b0fae7ce 
+                az account set --subscription 33414221-3b85-41aa-b5d1-5d349e46fee3
+                az aks get-credentials --resource-group TestDespliegue --name cluster
+                cd k8s
+                kubectl apply -f micro_hola.yaml
+                """
+                }
+                echo 'succesfull'
+            }
+        }
+    }
+}
