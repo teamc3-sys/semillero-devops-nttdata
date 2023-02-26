@@ -14,16 +14,19 @@ pipeline {
         }
         stage('Test') {
             steps {
+                cd java-maven-app
                 sh 'mvn test'
             }
             post {
                 always {
+                    cd java-maven-app
                     junit 'target/surefire-reports/*.xml'
                 }
             }
         }
         stage('Deploy') {
             steps {
+                cd java-maven-app
                 sh './jenkins/scripts/deliver.sh'
             }
         }
