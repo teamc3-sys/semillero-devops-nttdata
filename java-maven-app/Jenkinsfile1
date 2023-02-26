@@ -37,7 +37,9 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'java-maven-app/jenkins/scripts/deliver.sh'               
+                cd java-maven-app
+                pwd
+                sh './jenkins/scripts/deliver.sh'               
             }
         }
     }
