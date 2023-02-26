@@ -32,10 +32,10 @@ pipeline {
             post {
                 always {
                     script{
-                sh """
-                cd java-maven-app
-                junit 'target/surefire-reports/*.xml'
-                """
+                    sh """
+                    cd java-maven-app
+                    junit 'target/surefire-reports/*.xml'
+                    """
             }
                     
                 }
