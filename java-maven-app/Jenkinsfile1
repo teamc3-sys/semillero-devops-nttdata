@@ -8,25 +8,25 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                cd java-maven-app
+                sh 'cd java-maven-app'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
             steps {
-                cd java-maven-app
+                sh 'cd java-maven-app'
                 sh 'mvn test'
             }
             post {
                 always {
-                    cd java-maven-app
+                    sh 'cd java-maven-app'
                     junit 'target/surefire-reports/*.xml'
                 }
             }
         }
         stage('Deploy') {
             steps {
-                cd java-maven-app
+                sh 'cd java-maven-app'
                 sh './jenkins/scripts/deliver.sh'
             }
         }
