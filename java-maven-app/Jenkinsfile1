@@ -21,8 +21,13 @@ pipeline {
         }
         stage('Test') {
             steps {
+                 script{
+                sh """
                 cd maven-app/java-maven-app
-                sh 'mvn test'
+                mvn test
+                """
+            }
+                
             }
             post {
                 always {
