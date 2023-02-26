@@ -11,8 +11,8 @@ pipeline {
                 script{
                 sh """
                 cd java-maven-app
-                echo"hola Ramiro"
-                ls
+                echo "hola Ramiro"
+                pwd
                 """
             }
                 sh 'mvn -B -DskipTests clean package'
