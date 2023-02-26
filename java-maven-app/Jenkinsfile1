@@ -31,13 +31,7 @@ pipeline {
             }
             post {
                 always {
-                    script{
-                    sh """
-                    cd java-maven-app
-                    junit target/surefire-reports/*.xml
-                    """
-            }
-                    
+                    junit 'java-maven-app/target/surefire-reports/*.xml'                    
                 }
             }
         }
