@@ -13,9 +13,10 @@ pipeline {
                 cd java-maven-app
                 echo "hola Ramiro"
                 pwd
+                mvn -B -DskipTests clean package
                 """
             }
-                sh 'mvn -B -DskipTests clean package'
+                
             }
         }
         stage('Test') {
