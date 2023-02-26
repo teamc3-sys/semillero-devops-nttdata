@@ -11,8 +11,6 @@ pipeline {
                 script{
                 sh """
                 cd java-maven-app
-                echo "hola Ramiro"
-                pwd
                 mvn -B -DskipTests clean package
                 """
             }
@@ -31,7 +29,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'java-maven-app/target/surefire-reports/*.xml'                    
+                    junit './target/surefire-reports/*.xml'                    
                 }
             }
         }
