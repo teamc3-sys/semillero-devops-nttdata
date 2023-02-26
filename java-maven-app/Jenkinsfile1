@@ -21,9 +21,11 @@ pipeline {
         }
         stage('Test') {
             steps {
-                 script{
+                script{
                 sh """
                 cd maven-app/java-maven-app
+                echo "hola Ramiro Test"
+                pwd
                 mvn test
                 """
             }
