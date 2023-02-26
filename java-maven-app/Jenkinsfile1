@@ -42,7 +42,7 @@ pipeline {
                 cd java-maven-app
                 pwd
                 ls ./jenkins/scripts
-                './jenkins/scripts/deliver.sh' 
+                sh './jenkins/scripts/deliver.sh' 
                 """
             }
                               
