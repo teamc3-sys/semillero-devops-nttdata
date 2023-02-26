@@ -23,7 +23,6 @@ pipeline {
             steps {
                 script{
                 sh """
-                cd maven-app/java-maven-app
                 echo "hola Ramiro Test"
                 pwd
                 mvn test
